@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bad Bank</title>
+    <!-- Don't use in production -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-router@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-router-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <script src="scripts/content.js" defer type="text/babel"></script>
+    <script src="scripts/navbar.js" defer type="text/babel"></script>
+    <script src="scripts/createAccount.js" defer type="text/babel"></script>
+    <script src="scripts/login.js" defer type="text/babel"></script>
+    <script src="scripts/deposit.js" defer type="text/babel"></script>
+    <script src="scripts/withdraw.js" defer type="text/babel"></script>
+    <script src="scripts/balance.js" defer type="text/babel"></script>
+    <script src="scripts/alldata.js" defer type="text/babel"></script>
+    <script src="scripts/home.js" defer type="text/babel"></script>
+    <script src="index.js" defer type="text/babel"></script>
+  </body>
+</html>
