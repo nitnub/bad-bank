@@ -1,5 +1,14 @@
 function Withdraw() {
   return (
-    <h1>Withdraw</h1>
-  )
+    <BankForm
+      // showName={false}
+      // showEmail={false}
+      // showPassword={false}
+      showBalance
+      showAmount
+      handler
+      color="success"
+      title="Withdraw"
+    />
+  );
 }

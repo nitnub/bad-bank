@@ -3,15 +3,12 @@ const Link = ReactRouterDOM.Link;
 const HashRouter = ReactRouterDOM.HashRouter;
 const UserContext = React.createContext(null);
 
-
-
 function Card(props) {
   function classes() {
     const bg = props.bgColor ? ' bg-' + props.bgColor : '';
     const txt = props.txtColor ? ' text-' + props.txtColor : ' text-white';
     return 'card mb-3 ' + bg + txt;
   }
-
 
   return (
     <div className={classes()} style={{ maxWidth: '18rem' }}>

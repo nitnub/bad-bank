@@ -1,5 +1,14 @@
 function Balance() {
   return (
-    <h1>Balance</h1>
-  )
+    <BankForm
+      // showName={false}
+      // showEmail={false}
+      // showPassword={false}
+      showBalance
+      // showAmount={false}
+      // handler={false}
+      color="black"
+      title="Balance"
+    />
+  );
 }

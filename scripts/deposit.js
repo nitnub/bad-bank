@@ -1,5 +1,14 @@
 function Deposit() {
   return (
-    <h1>Deposit</h1>
-  )
+    <BankForm
+      showName={false}
+      showEmail={false}
+      showPassword={false}
+      showBalance={true}
+      showAmount={true}
+      handler={true}
+      color="warning"
+      title="Deposit"
+    />
+  );
 }
