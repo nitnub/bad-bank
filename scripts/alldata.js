@@ -16,6 +16,10 @@ function AllData() {
                     <td>{user.id}</td>
                   </tr>
                   <tr>
+                    <td className="text-success font-weight-bold">Account Balance:</td>
+                    <td>{formatAsCurrency(user.balance)}</td>
+                  </tr>
+                  <tr>
                     <td className="text-success font-weight-bold">Email:</td>
                     <td>{user.email}</td>
                   </tr>

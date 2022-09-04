@@ -1,17 +1,18 @@
 const testMode = true;
 let startState = { users: [] };
 if (testMode) {
-
+  console.log('Starting test mode...');
+  startState.currentUser = 4;
   for (let i = 0; i < 10; i++) {
     startState.users.push({
       id: i,
       name: 'John Smith',
-      email: 'jsmith@abc.com',
+      email: 'jsmith@abcd.com',
       password: 'myPass123',
-      balance: 100,
+      balance: 1000,
     });
   }
-} 
+}
 
 function Spa() {
   return (
