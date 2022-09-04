@@ -3,18 +3,26 @@ function Withdraw() {
   const handler = (context) => {
     const entry = document.getElementById('amount');
     const amount = entry.value;
-    const [ currentUser ] = ctx.users.filter((user) => user.id === ctx.currentUser )
-    
-    console.log('ctx', ctx)
+    const [currentUser] = ctx.users.filter(
+      (user) => user.id === ctx.currentUser
+    );
+
+    console.log('ctx', ctx);
     console.log(currentUser.balance);
     console.log(amount);
 
     if (currentUser.balance >= amount) {
       console.log(ctx.users[ctx.currentUser].balance);
       ctx.users[ctx.currentUser].balance -= amount;
+    } else {
+      alert(
+        `Transaction failed due to insufficient funds. Please enter an amount that is less than or equal to ${formatAsCurrency(
+          currentUser.balance
+        )}`
+      );
     }
-    console.log('ctx', ctx)
-  }
+    console.log('ctx', ctx);
+  };
 
   return (
     <>

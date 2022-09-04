@@ -14,7 +14,7 @@ function BankForm(props) {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const [amount, setAmount] = React.useState('');
+  const [amount, setAmount] = React.useState('0');
   const ctx = React.useContext(UserContext);
 
   // const currentUser = getCurrentUser(ctx);
@@ -40,7 +40,7 @@ function BankForm(props) {
     setName('');
     setEmail('');
     setPassword('');
-    setAmount('');
+    setAmount(0);
     setShow(true);
   }
 
@@ -146,9 +146,16 @@ function BankForm(props) {
           )}
 
           {handler && (
-            <button type="submit" className="btn btn-light">
-              {title}
-            </button>
+            <>
+              <div className="modal-dialog modal-dialog-centered">qsqs</div>
+              <button
+                type="submit"
+                className="btn btn-light"
+                disabled={amount === '0'}
+              >
+                {title}
+              </button>
+            </>
           )}
         </form>
       }
