@@ -24,15 +24,18 @@ function Deposit() {
   console.log('ctx', ctx);
 
   return (
-    <BankForm
-      // showName={false}
-      // showEmail={false}
-      // showPassword={false}
-      showBalance
-      showAmount
-      handler={handler}
-      color="warning"
-      title="Deposit"
-    />
+    <>
+      <h1 className="section-header">Deposit</h1>
+      <BankForm
+        // showName={false}
+        // showEmail={false}
+        // showPassword={false}
+        showBalance
+        showAmount
+        handler={handler}
+        color="warning"
+        title="Deposit"
+      />
+    </>
   );
 }

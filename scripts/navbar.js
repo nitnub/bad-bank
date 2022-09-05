@@ -18,19 +18,24 @@ function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
                 Home
               </a>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link" href="#/CreateAccount/">
                 Create Account
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link" href="#/Login/">
                 Login
+              </a>
+            </li> */}
+                        <li className="nav-item">
+              <a className="nav-link" href="#/Withdraw/">
+                Withdraw
               </a>
             </li>
             <li className="nav-item">
@@ -38,16 +43,12 @@ function NavBar() {
                 Deposit
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#/Withdraw/">
-                Withdraw
-              </a>
-            </li>
-            <li className="nav-item">
+
+            {/* <li className="nav-item">
               <a className="nav-link" href="#/Balance/">
                 Balance
               </a>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link" href="#/AllData/">
                 AllData

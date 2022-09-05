@@ -15,7 +15,7 @@ function CreateAccount() {
     return true;
   }
 
-  const handler = () => {
+  function handleCreate() {
     console.log(name, email, password);
     if (!validate(name, 'name')) return;
     if (!validate(email, 'email')) return;
@@ -28,7 +28,7 @@ function CreateAccount() {
       balance: 100,
     });
     setShow(false);
-  };
+  }
 
   function clearForm() {
     setName('');
@@ -38,27 +38,26 @@ function CreateAccount() {
   }
 
   return (
-    <>
-      <h1 className="section-header">Create Account</h1>
-      {show ? (
-        <BankForm
-          showName
-          showEmail
-          showPassword
-          // showBalance
-          // showAmount
-          handler={handler}
-          color="warning"
-          title="Deposit"
-        />
-      ) : (
-        <>
-          <h5>Success</h5>
-          <button type="submit" className="btn btn-light" onClick={clearForm}>
-            Add another account
-          </button>
-        </>
-      )}
-    </>
-  );
+    show ? 
+  <div>abc</div>
+    // <BankForm
+    //   // showName={false}
+    //   // showEmail={false}
+    //   // showPassword={false}
+    //   showBalance
+    //   showAmount
+    //   handler={handler}
+    //   color="warning"
+    //   title="Deposit"
+    // />
+   : 
+    <div>123</div>
+    // <>
+    //   <h5>Success</h5>
+    //   <button type="submit" className="btn btn-light" onClick={clearForm}>
+    //     Add another account
+    //   </button>
+    // </>
+    
+
 }
