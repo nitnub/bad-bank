@@ -151,7 +151,7 @@ function BankForm(props) {
               <button
                 type="submit"
                 className="btn btn-light"
-                disabled={amount === '0'}
+                disabled={showAmount ? amount === '0' : false}
               >
                 {title}
               </button>
