@@ -1,50 +1,35 @@
 function AllData() {
   const ctx = React.useContext(UserContext);
-  console.log(ctx.users)
+  console.log(ctx.users);
   return (
+    <table className="table">
+      <thead>
+        <tr>
+          {/* <th scope="col">#</th> */}
+          <th scope="col">Email</th>
+          <th scope="col">Name</th>
+          <th scope="col">Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        {ctx.users.map((user) => {
+          return (
+            <tr>
+              {/* <th scope="row">1</th> */}
+              <td>{user.email}</td>
+              <td>{user.name}</td>
+              <td>{user.password}</td>
+            </tr>
+          );
+        })}
 
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
-    
+      </tbody>
+    </table>
   );
 }
 
-
-
-{/* <div>
+{
+  /* <div>
       <h1 className="section-header">All Data</h1>
       {ctx.users.map((user) => (
         <>
@@ -73,13 +58,18 @@ function AllData() {
                 </tbody>
               </table>
             </div>
-          </div> */}
+          </div> */
+}
 
-          {/* <ul>
+{
+  /* <ul>
             <li key={user.id}>
               <div>{`ID: ${user.id} || User: ${user.name} || Email: ${user.email} || Password: ${user.password}`}</div>
             </li>
-          </ul> */}
-        // </>
-      // ))}
-    {/* </div> */}
+          </ul> */
+}
+// </>
+// ))}
+{
+  /* </div> */
+}
